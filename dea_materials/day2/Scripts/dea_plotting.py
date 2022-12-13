@@ -394,7 +394,7 @@ def map_shapefile(gdf,
         An optional `ipyleaflet.basemaps` object used as the basemap for 
         the interactive plot. Defaults to `basemaps.Esri.WorldImagery`.
     default_zoom : int, optional
-        An optional integer giving a default zoom level for the 
+        An optional integer giving a default zoom level for the f
         interactive ipyleaflet plot. Defaults to None, which infers
         the zoom level from the extent of the data.
     hover_col : boolean or str, optional
@@ -887,7 +887,7 @@ def xr_animation(ds,
     array = np.squeeze(array)  # remove final axis if only one band
 
     # Set up figure
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(ncols =2)
     fig.set_size_inches(width * scale / 72, height * scale / 72, forward=True)
     fig.subplots_adjust(left=0, bottom=0, right=1, top=1, wspace=0, hspace=0)
 
